@@ -1,6 +1,6 @@
-package gr6.se2.api;
+package gr6.se2.controller;
 
-import gr6.se2.api.shared.Authorizer;
+import gr6.se2.controller.shared.Authorizer;
 import gr6.se2.model.course.Course;
 import gr6.se2.model.course.CourseRepository;
 import gr6.se2.model.enrollment.Enrollment;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 @Controller
 @AllArgsConstructor
-public class EnrollCourseAPI {
+public class EnrollCourseController {
     private final Authorizer authorizer;
     private final CourseRepository courseRepository;
     private final EnrollmentRepository enrollmentRepository;

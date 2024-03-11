@@ -1,4 +1,4 @@
-package gr6.se2.api.shared;
+package gr6.se2.controller.shared;
 
 import org.springframework.stereotype.Service;
 
