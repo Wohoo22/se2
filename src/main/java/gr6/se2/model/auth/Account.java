@@ -1,17 +1,31 @@
 package gr6.se2.model.auth;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 
 import java.util.Date;
 
 @Getter
+@Entity
+@Table(name = "account")
 public class Account {
     /**
      * Refer to the id of student, teacher or admin
      */
-    private int ownerId;
+    @Id
+    @Column(name = "ownerId")
+    private Integer ownerId;
+
+    @Column(name = "username")
     private String username;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "role")
     private Role role;
     /**
      * A timestamp in millisecond.

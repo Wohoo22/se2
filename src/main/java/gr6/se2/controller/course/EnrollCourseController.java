@@ -28,7 +28,7 @@ public class EnrollCourseController {
             final Course course = courseRepository.findByEnrollKey(requestBody.enrollKey);
             if (course == null)
                 return ResponseEntity.badRequest().body("Cannot find course with that enroll key");
-            final Enrollment enrollment = new Enrollment(studentId, course.getId());
+            final Enrollment enrollment = new Enrollment(studentId, course.getCid());
             enrollmentRepository.save(enrollment);
             return ResponseEntity.ok().body("Enroll success");
         } catch (Exception e) {
